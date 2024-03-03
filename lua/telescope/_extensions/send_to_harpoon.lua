@@ -33,7 +33,7 @@ local send_selected_to_harpoon = function(prompt_bufnr)
         local currentpath = vim.fn.getcwd()
 
         if filename then
-            harpoon:list():append({value=string.gosub(filename, currentpath, "")})
+            harpoon:list():append({value=string.gsub(filename, currentpath, "")})
         end
     end
 
