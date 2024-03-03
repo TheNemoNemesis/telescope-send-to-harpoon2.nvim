@@ -34,7 +34,8 @@ local send_selected_to_harpoon = function(prompt_bufnr)
 
         if filename then
             -- harpoon:list():append({value=filename:gsub(currentpath, "")})
-            vim.cmd.echomsg(type(filename))
+            print(filename)
+            print(filename:gsub(currentpath, ""))
         end
     end
 
