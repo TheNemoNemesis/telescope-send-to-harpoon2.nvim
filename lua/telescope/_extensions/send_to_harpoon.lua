@@ -32,7 +32,7 @@ local send_selected_to_harpoon = function(prompt_bufnr)
         local filename = from_entry.path(entry, false, false)
 
         if filename then
-            harpoon:list():append(filename)
+            harpoon:list().append(filename)
         end
     end
 
