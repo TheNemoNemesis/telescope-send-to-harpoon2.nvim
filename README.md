@@ -1,6 +1,7 @@
 # telescope-send-to-harpoon.nvim
 
 Custom [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) action for sending selections to [harpoon](https://github.com/theprimeagen/harpoon).
+(fork of [telescope-send-to-harpoon](https://github.com/asbjornhaland/telescope-send-to-harpoon.nvim) updated to harpoon2)
 
 ## Requirements
 
