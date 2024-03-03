@@ -1,6 +1,6 @@
-# telescope-send-to-harpoon.nvim
+# telescope-send-to-harpoon2.nvim
 
-Custom [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) action for sending selections to [harpoon](https://github.com/theprimeagen/harpoon).
+Custom [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) action for sending selections to [harpoon](https://github.com/theprimeagen/harpoon).  
 (fork of [telescope-send-to-harpoon](https://github.com/asbjornhaland/telescope-send-to-harpoon.nvim) updated to harpoon2)
 
 ## Requirements
@@ -11,7 +11,7 @@ Custom [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) action
 ## Setup
 
 ```viml
-Plug 'asbjornhaland/telescope-send-to-harpoon.nvim'
+Plug 'TheNemoNemesis/telescope-send-to-harpoon2.nvim'
 ```
 
 Load the extension by doing:
