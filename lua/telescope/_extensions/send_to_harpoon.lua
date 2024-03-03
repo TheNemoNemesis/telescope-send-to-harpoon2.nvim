@@ -30,9 +30,10 @@ local send_selected_to_harpoon = function(prompt_bufnr)
 
     for _, entry in ipairs(selections) do
         local filename = from_entry.path(entry, false, false)
+        local currentpath = vim.fn.getcwd()
 
         if filename then
-            harpoon:list():append(filename)
+            harpoon:list():append({value=filename:gsub(currentpath, "")})
         end
     end
 
