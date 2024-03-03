@@ -3,8 +3,8 @@ if not has_telescope then
   error("This plugin requires nvim-telescope/telescope.nvim")
 end
 
-local has_harpoon_mark, harpoon_mark = pcall(require, "harpoon.mark")
-if not has_harpoon_mark then
+local has_harpoon, harpoon = pcall(require, "harpoon")
+if not has_harpoon then
     error("This plugin requires theprimeagen/harpoon")
 end
 
@@ -32,7 +32,7 @@ local send_selected_to_harpoon = function(prompt_bufnr)
         local filename = from_entry.path(entry, false, false)
 
         if filename then
-            harpoon_mark.add_file(filename)
+            harpoon:list():append(filename)
         end
     end
 
