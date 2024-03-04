@@ -28,16 +28,16 @@ end
 local send_selected_to_harpoon = function(prompt_bufnr)
     local selections = get_selections(prompt_bufnr)
     local currentpath = vim.fn.getcwd() .. "/"
+    local currentpathlen = string.len(currentpath) + 1
 
     for _, entry in ipairs(selections) do
         local filename = from_entry.path(entry, false, false)
 
         if filename then
             if string.find(filename, currentpath) ~= nil then
-                filename = string.sub(filename, string.len(currentpath) + 1)
+                filename = string.sub(filename, currentpathlen)
             end
             harpoon:list():append({context={col=1, row=1}, value=filename})
-            print(filename)
         end
     end
 
