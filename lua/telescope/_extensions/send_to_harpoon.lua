@@ -28,6 +28,7 @@ end
 local send_selected_to_harpoon = function(prompt_bufnr)
     local selections = get_selections(prompt_bufnr)
     local currentpath = vim.fn.getcwd() .. "/"
+    print(currentpath)
     local currentpathlen = string.len(currentpath) + 1
 
     for _, entry in ipairs(selections) do
