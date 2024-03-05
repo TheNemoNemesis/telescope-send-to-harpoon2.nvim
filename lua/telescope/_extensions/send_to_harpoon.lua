@@ -34,9 +34,7 @@ local send_selected_to_harpoon = function(prompt_bufnr)
         local filename = from_entry.path(entry, false, false)
 
         if filename then
-            if string.find(filename, currentpath) ~= nil then
-                filename = string.sub(filename, currentpathlen)
-            end
+            filename = string.gsub(filename, currentpath, "")
             harpoon:list():append({context={col=1, row=1}, value=filename})
         end
     end
