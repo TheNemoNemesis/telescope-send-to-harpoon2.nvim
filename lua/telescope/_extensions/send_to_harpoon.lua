@@ -25,11 +25,10 @@ local get_selections = function(prompt_bufnr)
     return selections
 end
 
-
-local projectpath = vim.fn.getcwd() .. "/"
-local projectpathlen = string.len(projectpath) + 1
 local send_selected_to_harpoon = function(prompt_bufnr)
     local selections = get_selections(prompt_bufnr)
+    local projectpath = vim.fn.getcwd() .. "/"
+    local projectpathlen = string.len(projectpath) + 1
 
     for _, entry in ipairs(selections) do
         local filename = from_entry.path(entry, false, false)
